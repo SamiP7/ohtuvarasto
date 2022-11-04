@@ -29,7 +29,7 @@ class TestVarasto(unittest.TestCase):
 
     def test_lisays_yrittaa_lisata_yli_varaston_tilavuuden(self):
         self.varasto.lisaa_varastoon(11)
-
+        #satunnainen muutos
         self.assertAlmostEqual(self.varasto.saldo, 10)
 
     def test_ottaminen_pyrkii_lisaamaan_saldoa(self):
