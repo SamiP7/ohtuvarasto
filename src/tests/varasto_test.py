@@ -6,10 +6,10 @@ class TestVarasto(unittest.TestCase):
     def setUp(self):
         self.varasto = Varasto(10)
 
-    def test_konstruktori_yrittaa_luoda_negatiivisen_tila_varaston(self):
-        self.varasto = Varasto(-1)
+    def test_konstruktori_yrittaa_luoda_varaston_jossa_liikaa_tuotetta(self):
+        self.varasto = Varasto(10, 11)
 
-        self.assertAlmostEqual(self.varasto.tilavuus, 0)
+        self.assertAlmostEqual(self.varasto.saldo, 10)
 
     def test_konstruktori_yrittaa_luoda_negatiivisen_tuote_varaston(self):
         self.varasto = Varasto(10, -1)
